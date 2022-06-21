@@ -36,9 +36,9 @@
                             </h4>
                         </div>
                         <div class="card-body mb-0">
-                            <p class=" mt-0 mb-0 "><a href=" {{ $berita->id }}">
+                            <p class=" mt-0 mb-0 "><a style="color:green" href=" {{ $berita->id }}">
                                     {{ $berita->id }}</a></p>
-                            <p class="card-text mt-0 mb-0">{{ $berita->body_txt_id }}</p>
+                            <p class="card-text max-body mt-0 mb-0">{{ $berita->body_txt_id }}</p>
                             <p>Upload by : {{ $berita->uploader_txt_id }} </p>
 
 
@@ -58,11 +58,13 @@
                     <li class="">{{ $paginator->links() }}</li>
                 </ul>
 
-
+                <form action="/"> <button type="submit" class="btn btn-primary">Kembali ke Halaman
+                        Pencarian</button>
+                </form>
             </div>
 
         </div>
-        <form action="/"> <button type="submit" class="btn btn-primary">Kembali ke Halaman Pencarian</button></form>
+
 
     </div>
 
