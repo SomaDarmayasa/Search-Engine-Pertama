@@ -21,7 +21,7 @@
                     <div class="search">
 
                         <input type="text" class="form-control" name="cari"
-                            placeholder="Cari Berita terbaru STAN? Silahkan ketikkan.. ">
+                            placeholder="Cari Berita tentang STAN? Silahkan ketikkan.. ">
                         <button type="submit" class="btn btn-primary">Cari</button>
 
                     </div>

@@ -36,11 +36,13 @@ class SolariumController extends Controller
     {
         //get data from request
         $cari = $request->input('cari');
+        $cari = str_replace(' ', '+', $cari);
         // dd($cari);
         // get data solr
         if ($cari != ''){
             $query = $this->client->createSelect();
-            $query->setQuery('body_txt_id:'.$cari);
+            // $query->setQuery('body_txt_id:'.$cari);
+            $query->setQuery('(title_txt_id:' . $cari . ' OR body_txt_id:' . $cari . ')^2');
             $query->setStart(0);
             $query->setRows(100);
             $resultset = $this->client->select($query);
